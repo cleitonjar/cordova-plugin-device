@@ -35,6 +35,7 @@ channel.waitForInitialization('onCordovaInfoReady');
  * @constructor
  */
 function Device() {
+    this.name = null;
     this.available = false;
     this.platform = null;
     this.version = null;
@@ -52,6 +53,7 @@ function Device() {
             //ignoring info.cordova returning from native, we should use value from cordova.version defined in cordova.js
             //TODO: CB-5105 native implementations should not return info.cordova
             var buildLabel = cordova.version;
+            me.name = info.name || 'unknown';
             me.available = true;
             me.platform = info.platform;
             me.version = info.version;
