@@ -84,6 +84,7 @@
 
     return @{
              @"manufacturer": @"Apple",
+             @"name": [device name],
              @"model": [device modelVersion],
              @"platform": @"iOS",
              @"version": [device systemVersion],
